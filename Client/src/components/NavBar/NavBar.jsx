@@ -27,6 +27,7 @@ function NavBar() {
         }
     ] ;
 
+
     // hooks
     let [open, setOpen] = useState(false) ;
 
@@ -74,9 +75,9 @@ function NavBar() {
                     />
 
                     <Button
-                    name={'Login'}
-                    color={'indigo'}
-                    tColor={'white'}
+                        name={'Login'}
+                        color={'indigo'}
+                        tColor={'white'}
                     />
 
                 </ul>
