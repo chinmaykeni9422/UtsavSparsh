@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {NavLink} from 'react-router-dom'
-import Button from '../Button.jsx/Button';
+import Button from '../Button.jsx/Button.jsx';
 
 function NavBar() {
 
@@ -8,22 +8,22 @@ function NavBar() {
         {
             id  : 1,
             name: "HOME",
-            to  : "/"
+            to  : ""
         },
         {
             id  : 2,
             name: "TEMPLATE",
-            to  : "/Tempalte"
+            to  : "Template"
         },
         {
             id  : 3,
             name: "ABOUT",
-            to  : "/About"
+            to  : "About"
         },
         {
             id  : 4,
             name: "CONTACT",
-            to  : "/Contact"
+            to  : "Contact"
         }
     ] ;
 
@@ -33,7 +33,7 @@ function NavBar() {
 
   return (
     <>
-        <div className='shadow-md w-full fixed top-0 left-0'>
+        <div className=' shadow sticky z-50 top-0'>
             
             <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
 
@@ -57,7 +57,7 @@ function NavBar() {
                         NavList.map((item) => (
                             <li className='md:ml-8 text-xl md:my-0 my-7' key={item.id}>
                                 <NavLink 
-                                    to = {item.to}
+                                    to = {`/${item.to}`}
                                     className={() => 
                                         `text-gray-800 hover:text-gray-400 duration-500`
                                     }
@@ -68,17 +68,15 @@ function NavBar() {
                         ))
                     }
 
-                    <Button
-                        name={'Register'}
-                        color={'indigo'}
-                        tColor={'white'}
-                    />
+                    <div className='flex gap-1'>
+                        <Button
+                            name={'Register'}
+                        />
 
-                    <Button
-                        name={'Login'}
-                        color={'indigo'}
-                        tColor={'white'}
-                    />
+                        <Button
+                            name={'Login'}
+                        />
+                    </div>
 
                 </ul>
 
