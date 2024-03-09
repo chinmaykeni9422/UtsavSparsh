@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Button({name, onClick, color, tColor}) {
+function Button({name, onClick}) {
   
   return (
     <button
-        className={`bg-${color}-600 text-${tColor} font-[Poppins] py-2 px-5 rounded md:ml-8 hover:bg-${color}-400 duration-500`}
+        className={`bg-indigo-600 text-white font-[Poppins] py-2 px-5 rounded md:ml-8 hover:bg-indigo-400 duration-500`}
         onClick={onClick}
     >
         {name}
