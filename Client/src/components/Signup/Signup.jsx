@@ -71,7 +71,7 @@ function Signup() {
                                 className="mt-2"
                             />
                             <div className='flex justify-center mt-2'>
-                                <Button type="submit" name="Signup" />
+                                <Button type="submit" name="Sign up" />
                             </div>
 
 
