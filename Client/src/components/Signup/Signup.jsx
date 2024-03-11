@@ -15,19 +15,19 @@ function Signup() {
     }
     return (
         <>
-            <div className='grid sm:grid-cols-2 mb-8'>
+            <div className='flex h-[40.25rem]  sm:flex-row justify-center items-center '>
 
-                <div className='min-h-full bg-orange-400 sm:block  hidden'>
-                    image
+                <div className='w-full h-full m-2 sm:block  hidden'>
+                    <img className='mt-1 ml-2 shadow-sm shadow-gray-400 rounded-lg w-full  h-full object-cover object' src="https://images.unsplash.com/photo-1480497209098-7b9e9555bcee?q=80&w=1670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                 </div>
 
-                <div className='min-h-full bg-white mx-5 mt-7'>
+                <div className='flex flex-col items-center justify-center w-full bg-white'>
                     
                     <h2 className="text-center text-2xl font-bold leading-tight">
                         Sign up to create account
                     </h2>
 
-                    <p className="mt-2 text-center text-base text-black/60 my-2">
+                    <p className=" text-center text-base text-black/60 my-2">
                         Already have an account?&nbsp;
                         <Link
                             to="/login"
@@ -47,6 +47,7 @@ function Signup() {
 
                                 placeholder="Full Name"
                                 {...register("name", { required: true })}
+                                className="mt-8"
                             />
 
                             <InputTaker
@@ -59,7 +60,7 @@ function Signup() {
                                     }
                                 )}
 
-                                className="mt-2"
+                                className="mt-8"
                             />
 
                             <InputTaker
@@ -70,7 +71,7 @@ function Signup() {
                                         required: true
                                     }
                                 )}
-                                className="mt-2"
+                                className="mt-8"
                             />
 
                             <InputTaker
@@ -81,10 +82,10 @@ function Signup() {
                                         required: true
                                     }
                                 )}
-                                className="mt-2"
+                                className="mt-8"
                             />
 
-                            <div className='flex justify-center mt-2'>
+                            <div className='flex justify-center mt-8'>
                                 <Button type="submit" name="Sign up" />
                             </div>
 
