@@ -57,6 +57,7 @@ function NavBar() {
                         NavList.map((item) => (
                             <li className='md:ml-8 text-xl md:my-0 my-7' key={item.id}>
                                 <NavLink 
+                                    onClick={() => setOpen(!open)}
                                     to = {`/${item.to}`}
                                     className={() => 
                                         `text-gray-800 hover:text-gray-400 duration-500`
