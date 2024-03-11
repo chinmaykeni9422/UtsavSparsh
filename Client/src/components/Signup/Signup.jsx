@@ -16,11 +16,17 @@ function Signup() {
     return (
         <>
             <div className='grid sm:grid-cols-2 mb-8'>
-                <div className='min-h-full bg-orange-400 sm:block  hidden'>image</div>
-                <div className='min-h-full bg-white mx-5 mt-7'>
 
+                <div className='min-h-full bg-orange-400 sm:block  hidden'>
+                    image
+                </div>
+
+                <div className='min-h-full bg-white mx-5 mt-7'>
                     
-                    <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
+                    <h2 className="text-center text-2xl font-bold leading-tight">
+                        Sign up to create account
+                    </h2>
+
                     <p className="mt-2 text-center text-base text-black/60 my-2">
                         Already have an account?&nbsp;
                         <Link
@@ -30,14 +36,19 @@ function Signup() {
                             Sign In
                         </Link>
                     </p>
+
                     {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
+
                     <form onSubmit={handleSubmit(handleSignup)}>
+
                         <div >
+
                             <InputTaker
 
                                 placeholder="Full Name"
                                 {...register("name", { required: true })}
                             />
+
                             <InputTaker
 
                                 placeholder="Email"
@@ -50,6 +61,7 @@ function Signup() {
 
                                 className="mt-2"
                             />
+
                             <InputTaker
                                 placeholder="Password"
                                 type="password"
@@ -60,6 +72,7 @@ function Signup() {
                                 )}
                                 className="mt-2"
                             />
+
                             <InputTaker
                                 placeholder="Confirm Password"
                                 type="password"
@@ -70,20 +83,18 @@ function Signup() {
                                 )}
                                 className="mt-2"
                             />
+
                             <div className='flex justify-center mt-2'>
                                 <Button type="submit" name="Sign up" />
                             </div>
 
-
                         </div>
-
 
                     </form>
 
                 </div>
+
             </div>
-
-
 
         </>
     )
