@@ -59,8 +59,8 @@ function NavBar() {
                                 <NavLink 
                                     onClick={() => setOpen(!open)}
                                     to = {`/${item.to}`}
-                                    className={() => 
-                                        `text-gray-800 hover:text-gray-400 duration-500`
+                                    className={({isActive}) => 
+                                        `text-gray-800 ${isActive? 'text-gray-400' : 'text-gray-800'} hover:text-gray-400 duration-500`
                                     }
                                 >
                                     {item.name}
