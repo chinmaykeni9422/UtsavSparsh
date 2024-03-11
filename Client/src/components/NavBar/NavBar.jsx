@@ -60,7 +60,7 @@ function NavBar() {
                                     onClick={() => setOpen(!open)}
                                     to = {`/${item.to}`}
                                     className={({isActive}) => 
-                                        `text-gray-800 ${isActive? 'text-gray-400' : 'text-gray-800'} hover:text-gray-400 duration-500`
+                                        `text-gray-800 ${isActive? 'text-indigo-600' : 'text-gray-800'} hover:text-gray-400 duration-500`
                                     }
                                 >
                                     {item.name}
