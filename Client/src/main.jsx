@@ -7,6 +7,8 @@ import Home from './components/Home/Home'
 import Template from './components/Template/Template'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
+import Signup from './components/Signup/Signup'
+import Login from './components/Login/Login'
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -15,6 +17,8 @@ import Contact from './components/Contact/Contact'
         <Route path= 'Template' element = {<Template />} />
         <Route path= 'About' element = {<About />} />
         <Route path= 'Contact' element = {<Contact />} />
+        <Route  path='signup' element={<Signup/>}/>
+        <Route  path='login' element={<Login/>}/>
       </Route>
     )
   )
