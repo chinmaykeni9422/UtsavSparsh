@@ -9,7 +9,7 @@ function Login() {
     const { register, handleSubmit } = useForm();
     const [error, setError] = useState("")
 
-    const handleSignup = (data) => {
+    const handleLogin = (data) => {
         console.log(data)
 
     }
@@ -31,7 +31,7 @@ function Login() {
                         </Link>
                     </p>
                     {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
-                    <form onSubmit={handleSubmit(handleSignup)}>
+                    <form onSubmit={handleSubmit(handleLogin)}>
                         <div >
                            
                             <InputTaker
