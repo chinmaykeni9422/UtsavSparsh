@@ -12,9 +12,9 @@ import Contact from './components/Contact/Contact'
     createRoutesFromElements(
       <Route path = '/' element = {<Layout />}>
         <Route path= '' element = {<Home />} />
-        <Route path= 'Template' element = {<Template />} />
-        <Route path= 'About' element = {<About />} />
-        <Route path= 'Contact' element = {<Contact />} />
+        <Route path= 'template' element = {<Template />} />
+        <Route path= 'about' element = {<About />} />
+        <Route path= 'contact' element = {<Contact />} />
       </Route>
     )
   )
