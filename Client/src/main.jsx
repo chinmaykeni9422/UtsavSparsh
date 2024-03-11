@@ -14,11 +14,17 @@ import Login from './components/Login/Login'
     createRoutesFromElements(
       <Route path = '/' element = {<Layout />}>
         <Route path= '' element = {<Home />} />
+<<<<<<< HEAD
         <Route path= 'Template' element = {<Template />} />
         <Route path= 'About' element = {<About />} />
         <Route path= 'Contact' element = {<Contact />} />
         <Route  path='signup' element={<Signup/>}/>
         <Route  path='login' element={<Login/>}/>
+=======
+        <Route path= 'template' element = {<Template />} />
+        <Route path= 'about' element = {<About />} />
+        <Route path= 'contact' element = {<Contact />} />
+>>>>>>> 2912898eaca8844e66c8d30a5b00409e0d4dd998
       </Route>
     )
   )

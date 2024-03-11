@@ -13,17 +13,17 @@ function NavBar() {
         {
             id  : 2,
             name: "TEMPLATE",
-            to  : "Template"
+            to  : "template"
         },
         {
             id  : 3,
             name: "ABOUT",
-            to  : "About"
+            to  : "about"
         },
         {
             id  : 4,
             name: "CONTACT",
-            to  : "Contact"
+            to  : "contact"
         }
     ] ;
 
