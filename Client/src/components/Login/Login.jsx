@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import Button from '../Button.jsx/Button';
 import { Link } from 'react-router-dom';
 
-function Login() {
+function Login({func}) {
 
     const { register, handleSubmit } = useForm();
     const [error, setError] = useState("")

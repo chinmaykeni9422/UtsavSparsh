@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import Button from '../Button.jsx/Button';
 import { Link } from 'react-router-dom';
 
-function Signup() {
+function Signup({func}) {
 
     const { register, handleSubmit } = useForm();
     const [error, setError] = useState("")
@@ -86,7 +86,10 @@ function Signup() {
                             />
 
                             <div className='flex justify-center mt-8'>
-                                <Button type="submit" name="Sign up" />
+                                <Button 
+                                    type="submit"
+                                    name="Sign up" 
+                                />
                             </div>
 
                         </div>

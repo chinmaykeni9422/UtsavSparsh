@@ -3,7 +3,9 @@ import {NavLink,useNavigate} from 'react-router-dom'
 import Button from '../Button.jsx/Button.jsx';
 
 function NavBar() {
-      const navigate=useNavigate()
+
+    const navigate=useNavigate()
+
     const NavList = [
         {
             id  : 1,
@@ -27,9 +29,9 @@ function NavBar() {
         }
     ] ;
 
-
     // hooks
     let [open, setOpen] = useState(false) ;
+
 
   return (
     <>
@@ -57,7 +59,7 @@ function NavBar() {
                         NavList.map((item) => (
                             <li className='md:ml-8 text-xl md:my-0 my-7' key={item.id}>
                                 <NavLink 
-                                    onClick={() => setOpen(!open)}
+                                    onClick={() => setOpen(!open) }
                                     to = {`/${item.to}`}
                                     className={({isActive}) => 
                                         `text-gray-800 ${isActive? 'text-indigo-600' : 'text-gray-800'} hover:text-gray-400 duration-500`
@@ -72,13 +74,18 @@ function NavBar() {
                     <div className='flex gap-1'>
                         <Button
                             name={'Register'}
-                            onClick={()=>navigate("/signup")}
-
+                            onClick={()=>(
+                                setOpen(!open) ,
+                                navigate("/signup")
+                            )}
                         />
 
                         <Button
                             name={'Login'}
-                            onClick={()=>navigate("/login")}
+                            onClick={()=>(
+                                setOpen(!open) ,
+                                navigate("/login")
+                            )}
                         />
                     </div>
 
