@@ -18,7 +18,7 @@ function Signup() {
             <div className='flex h-[40.25rem]  sm:flex-row justify-center items-center '>
 
                 <div className='w-full h-full m-2 sm:block  hidden'>
-                    <img className='mt-1 ml-2 shadow-sm shadow-gray-400 rounded-lg w-full  h-full object-cover object' src="https://images.unsplash.com/photo-1480497209098-7b9e9555bcee?q=80&w=1670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <img className='mt-1 ml-2 shadow-sm shadow-gray-400 rounded-lg w-full  h-full object-cover object' src="https://img.freepik.com/free-vector/modern-online-registration-composition_23-2147991434.jpg?t=st=1710215173~exp=1710218773~hmac=3d925551ca4c76f3ad46c598e8819d539b8b7c27eba0796d65067e8b6922dea5&w=740" alt="" />
                 </div>
 
                 <div className='flex flex-col items-center justify-center w-full bg-white'>

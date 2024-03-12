@@ -19,7 +19,7 @@ function Login() {
             <div className='flex h-[40.25rem]  sm:flex-row justify-center items-center'>
 
                 <div className='w-full h-full m-2 sm:block  hidden'>
-                    <img className='mt-1 ml-2 shadow-sm shadow-gray-400 rounded-lg w-full  h-full object-cover object' src="https://images.unsplash.com/photo-1480497209098-7b9e9555bcee?q=80&w=1670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <img className='mt-1 ml-2 -sm shadow-gray-400 rounded-lg w-full  h-full object-cover object' src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7893.jpg?w=740&t=st=1710214968~exp=1710215568~hmac=9802e1af094bb80e20e59d7c46a460cd765226925b58ea3619d8c1d7d5856a5f" alt="" />
                 </div>
 
                 <div className='flex flex-col items-center justify-center w-full bg-white'>
