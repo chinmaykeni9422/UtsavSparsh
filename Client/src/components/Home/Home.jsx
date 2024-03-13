@@ -1,9 +1,10 @@
 import React from 'react'
+import Carousel from '../Carousel/Carousel'
 
 function Home() {
   return (
     <>
-      <div className="text-3xl m-auto text-center h-screen">
+      <div className="text-3xl  m-auto text-center h-screen">
 
         <div className='my-8 p-3'>
 
@@ -17,7 +18,7 @@ function Home() {
 
         </div>
 
-        {/* slider */}
+        <Carousel />
 
       </div>
     </>
