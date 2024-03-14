@@ -21,7 +21,7 @@ return(
 
         <input
           type={type}
-          className={`px-3 py-3 rounded-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-gray-200 w-80 ${className}`}
+          className={`px-3 py-3 rounded-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-gray-300 w-80 ${className}`}
           ref={ref}
           {...props}
           id={id}
