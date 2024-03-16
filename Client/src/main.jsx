@@ -9,12 +9,12 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Signup from './components/Signup/Signup'
 import Login from './components/Login/Login'
+import ShowCategory from './components/ShowCategory/ShowCategory'
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path = '/' element = {<Layout />}>
         <Route path= '' element = {<Home />} />
-        
         <Route  path='signup' element={<Signup/>}/>
         <Route  path='login' element={<Login/>}/>
         <Route path= 'template' element = {<Template />} />
