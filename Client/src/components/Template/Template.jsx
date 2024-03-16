@@ -1,12 +1,37 @@
 import React from 'react'
 import Button from '../Button.jsx/Button';
+import babyImg from '../../assets/babyShower.jpg'
+import birthdayImg from '../../assets/birthday.jpg'
+import engImg from '../../assets/engegment.jpg'
+import wedImg from '../../assets/wedding.jpg'
+import CategoryItem from './CategoryItem';
+import { NavLink } from 'react-router-dom';
+
+const imdData = [
+  {
+    title: 'wedding Invitation' ,
+    img : wedImg
+  },
+  {
+    title: 'baby shower Invitation' ,
+    img : babyImg
+  },
+  {
+    title: 'birthday Invitation' ,
+    img : birthdayImg
+  },
+  {
+    title: 'engagement Invitation' ,
+    img : engImg
+  }
+]
 
 
 function Tempalte() {
   return (
     <>
 
-      <div className=" flex flex-col h-screen w-full">
+      <div className=" flex mb-48 flex-col h-screen w-full">
         
         <div className='m-10 md:mt-10 md:ml-20 md:mr-20'>
 
@@ -40,6 +65,21 @@ function Tempalte() {
               Category
             </h1>
 
+            <div className='w-full mt-5 flex flex-wrap justify-around '>
+              {
+                imdData.map((item) => (
+
+                  <NavLink to=''>
+
+                    <CategoryItem image={item.img} title={item.title} />
+
+                  </NavLink>
+                
+                ))
+              }
+
+            </div>
+            
           </div>
 
         </div>        
