@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../Button.jsx/Button';
 import babyImg from '../../assets/babyShower.jpg'
 import birthdayImg from '../../assets/birthday.jpg'
@@ -28,10 +28,13 @@ const imdData = [
 
 
 function Tempalte() {
+
+   const [text, setText] = useState('') ;
+
   return (
     <>
 
-      <div className=" flex mb-48 flex-col h-screen w-full">
+      <div className=" flex  flex-col w-full">
         
         <div className='m-10 md:mt-10 md:ml-20 md:mr-20'>
 
@@ -49,9 +52,9 @@ function Tempalte() {
 
           <div className='flex'>
             
-            <input placeholder='Enter desire template' className='p-2 pl-3 mr-2 w-full border border-gray-300 outline-none focus:bg-gray-50' type="text" />
+            <input placeholder='Enter desire template'  onChange={(e) => setText(e.target.value)} className='w-96 p-2 pl-3 mr-2 w-full border border-gray-300 outline-none focus:bg-gray-50' type="text" />
 
-            <Button type="submit" name="search" />
+            {/* <Button type="submit" name="search" /> */}
 
           </div>
 
@@ -65,18 +68,27 @@ function Tempalte() {
               Category
             </h1>
 
-            <div className='w-full mt-5 flex flex-wrap justify-around '>
-              {
-                imdData.map((item) => (
+            <div className='w-full  mt-5 flex flex-wrap justify-around '>
 
-                  <NavLink to=''>
+            {
+              imdData.filter((item) => {
+                if(text === ''){
+                  return item ;
+                }
+                else if(item.title.toLowerCase().includes(text.toLocaleLowerCase())){
+                  return item ;
+                }
+              })
+              .map((item, key) => {
+                return (
+                  <NavLink to='/template/category'>
 
                     <CategoryItem image={item.img} title={item.title} />
 
                   </NavLink>
-                
-                ))
-              }
+                )
+              })
+            }
 
             </div>
             
