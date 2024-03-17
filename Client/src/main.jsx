@@ -18,6 +18,7 @@ import ShowCategory from './components/ShowCategory/ShowCategory'
         <Route  path='signup' element={<Signup/>}/>
         <Route  path='login' element={<Login/>}/>
         <Route path= 'template' element = {<Template />} />
+        <Route path= 'template/category' element = {<ShowCategory />} />
         <Route path= 'about' element = {<About />} />
         <Route path= 'contact' element = {<Contact />} />
       </Route>
