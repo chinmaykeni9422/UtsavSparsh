@@ -16,7 +16,7 @@ function Login({func}) {
     return (
         <>
 
-            <div className='flex h-[40.25rem]  sm:flex-row justify-center items-center'>
+            <div className='flex mb-5 h-[40.25rem]  sm:flex-row justify-center items-center'>
 
                 <div className='w-full h-full m-2 sm:block  hidden'>
                     <img className='mt-1 ml-2 -sm shadow-gray-400 rounded-lg w-full  h-full object-cover object' src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7893.jpg?w=740&t=st=1710214968~exp=1710215568~hmac=9802e1af094bb80e20e59d7c46a460cd765226925b58ea3619d8c1d7d5856a5f" alt="" />
