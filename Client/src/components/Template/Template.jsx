@@ -1,30 +1,7 @@
 import React, { useState } from 'react'
-import Button from '../Button.jsx/Button';
-import babyImg from '../../assets/babyShower.jpg'
-import birthdayImg from '../../assets/birthday.jpg'
-import engImg from '../../assets/engegment.jpg'
-import wedImg from '../../assets/wedding.jpg'
 import CategoryItem from './CategoryItem';
 import { NavLink } from 'react-router-dom';
-
-const imdData = [
-  {
-    title: 'wedding Invitation' ,
-    img : wedImg
-  },
-  {
-    title: 'baby shower Invitation' ,
-    img : babyImg
-  },
-  {
-    title: 'birthday Invitation' ,
-    img : birthdayImg
-  },
-  {
-    title: 'engagement Invitation' ,
-    img : engImg
-  }
-]
+import { imgData } from '../../assets/allData.js';
 
 
 function Tempalte() {
@@ -52,7 +29,7 @@ function Tempalte() {
 
           <div className='flex'>
             
-            <input placeholder='Enter desire template'  onChange={(e) => setText(e.target.value)} className='w-96 p-2 pl-3 mr-2 w-full border border-gray-300 outline-none focus:bg-gray-50' type="text" />
+            <input placeholder='Enter desire template'  onChange={(e) => setText(e.target.value)} className='w-96 p-2 pl-3 mr-2 border border-gray-300 outline-none focus:bg-gray-50' type="text" />
 
             {/* <Button type="submit" name="search" /> */}
 
@@ -71,7 +48,7 @@ function Tempalte() {
             <div className='w-full  mt-5 flex flex-wrap justify-around '>
 
             {
-              imdData.filter((item) => {
+              imgData.filter((item) => {
                 if(text === ''){
                   return item ;
                 }

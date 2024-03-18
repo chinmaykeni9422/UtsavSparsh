@@ -3,31 +3,8 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImgCard from './ImgCard'
-import greenImg from '../../assets/plainGreen.jpg'
-
-const images = [
-  {
-    img : greenImg
-  },
-  {
-    img : greenImg
-  },
-  {
-    img : greenImg
-  },
-  {
-    img : greenImg
-  },
-  {
-    img : greenImg
-  },
-  {
-    img : greenImg
-  },
-  {
-    img : greenImg
-  }
-] ;
+import { imgData } from '../../assets/allData';
+import { NavLink } from 'react-router-dom'
 
 function Carousel() {
 
@@ -35,7 +12,7 @@ function Carousel() {
     dots: true,
     infinite: true,
     speed: 800,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
       {
@@ -51,14 +28,18 @@ function Carousel() {
 
   return (
     <>
-      <div className='w-3/4  m-auto'>
+      <div className='w-4/5   m-auto'>
 
         <Slider {...settings}>
 
           {
-            images.map((item) => (
-              
-              <ImgCard link={item.img} />
+            imgData.map((item) => (
+
+              <NavLink
+                to='/template/category'
+              >
+                  <ImgCard link={item.img} />
+              </NavLink>
 
             ))
           }
