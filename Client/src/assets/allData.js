@@ -19,9 +19,6 @@ export const images = [
   },
   {
     img : greenImg
-  },
-  {
-    img : greenImg
   }
 ] ;
 
