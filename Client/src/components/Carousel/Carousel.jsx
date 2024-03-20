@@ -28,7 +28,7 @@ function Carousel() {
 
   return (
     <>
-      <div className='w-4/5   m-auto'>
+      <div className='w-4/5  m-auto'>
 
         <Slider {...settings}>
 
