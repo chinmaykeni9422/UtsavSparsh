@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CategoryItem from './CategoryItem';
 import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
