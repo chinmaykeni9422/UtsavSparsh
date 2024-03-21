@@ -32,19 +32,19 @@ import wedImg from '../assets/wedding.jpg'
 
 export const imgData = [
     {
-      title: 'wedding Invitation' ,
+      title: 'weddingInvitation' ,
       img : wedImg
     },
     {
-      title: 'baby shower Invitation' ,
+      title: 'babyshowerInvitation' ,
       img : babyImg
     },
     {
-      title: 'birthday Invitation' ,
+      title: 'birthdayInvitation' ,
       img : birthdayImg
     },
     {
-      title: 'engagement Invitation' ,
+      title: 'engagementInvitation' ,
       img : engImg
     }
 ]

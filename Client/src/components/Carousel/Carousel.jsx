@@ -4,14 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImgCard from './ImgCard'
 import { imgData } from '../../assets/allData';
-import { NavLink } from 'react-router-dom'
-import { birthArray, babyArray, engArray, wedArray } from '../../assets/allData';
+import { NavLink } from 'react-router-dom';
 
 function Carousel() {
 
-  const [imgArray, setimgArray] = useState([])
-
-  
+  const [category , setCategory] = useState("") ;
 
   const settings = {
     dots: true,
@@ -31,9 +28,11 @@ function Carousel() {
     ]
   };
 
-  const setArray = () => {
-    console.log('hellow')
+  const selectCategory = (e) => {
+    const selectedCategory = e.target.name;
+    setCategory(selectedCategory); 
   }
+  
 
   return (
     <>
@@ -45,10 +44,10 @@ function Carousel() {
             imgData.map((item) => (
 
               <NavLink
-                to='/template/category'
-                onClick={setArray}
+                onClick={selectCategory}
+                to={`/${category}`}
               >
-                  <ImgCard link={item.img} />
+                  <ImgCard title={item.title} link={item.img} />
               </NavLink>
 
             ))

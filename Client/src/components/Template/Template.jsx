@@ -1,12 +1,21 @@
 import React, { useState } from 'react'
 import CategoryItem from './CategoryItem';
 import { NavLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { imgData } from '../../assets/allData.js';
 
 
 function Tempalte() {
 
-   const [text, setText] = useState('') ;
+  const [category , setCategory] = useState("") ;
+
+  const [text, setText] = useState('') ;
+
+  const selectCategory = (e) => {
+    const selectedCategory = e.target.name;
+    setCategory(selectedCategory); 
+    
+  }
 
   return (
     <>
@@ -58,7 +67,10 @@ function Tempalte() {
               })
               .map((item, key) => {
                 return (
-                  <NavLink to='/template/category'>
+                  <NavLink 
+                    onClick={selectCategory}
+                    to={`/template/${category}`}
+                  >
 
                     <CategoryItem image={item.img} title={item.title} />
 
