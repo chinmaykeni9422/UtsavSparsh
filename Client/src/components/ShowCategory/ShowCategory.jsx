@@ -11,10 +11,15 @@ function ShowCategory() {
   // hooks
   const {category} = useParams() ;
   const [showModal, setShowModel] = useState(false) ;
+  const [srcUrl, setSrcUrl] = useState('') ;
 
   //function
   const setModalState = () =>{
     setShowModel(!showModal) ;
+  }
+
+  const handleEvent = (e) => {
+    setSrcUrl(e.target.src) ;
   }
 
   let categoryArray ;
@@ -39,6 +44,7 @@ function ShowCategory() {
   return (
     <>
       <div>
+
         <div className='mt-8 ml-10 font-serif md:text-2xl md:text-center  uppercase text-blue-700'>
           <h1>select your desire template</h1>
         </div>
@@ -51,7 +57,7 @@ function ShowCategory() {
                 
                 <div onClick={setModalState} className='md:h-[350px] bg-black rounded-xl'>
 
-                  <img name={`${item.name}`} loading='lazy' className='rounded-xl h-full'  src={item.img} alt="" />
+                  <img onClick={handleEvent} name={`${item.name}`} loading='lazy' className='rounded-xl h-full'  src={item.img} alt="" />
                   
                 </div>
 
@@ -60,9 +66,9 @@ function ShowCategory() {
             ))}
           </div>
         </div>
-      </div>
-
-      <Model func={setModalState} visible={showModal} />
+        
+        <Model func={setModalState} url={srcUrl} visible={showModal} />
+      </div>    
     </>
   );
 }
